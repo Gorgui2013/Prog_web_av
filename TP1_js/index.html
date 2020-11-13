@@ -1,0 +1,89 @@
+<html lang="fr">
+<head>
+  <title>Fiche TP 1</title>
+  <meta charset="Utf-8">
+</head>
+<body>
+  <div align="center">
+    <div>
+      <h1>FICHE TP 1</h1>
+      <p>Choisir l'ecxercice à executer</p>
+    </div>
+    <div>
+      <button onclick="openWindowExo1()">Exercice 1</button>
+      <button onclick="openWindowExo2()">Exercice 2</button>
+    </div>
+    <hr>
+    <div>
+      <div id="exo1">
+        <h1>Exercice 1 :</h1>
+        <p>Une année bissextile est une année comptant 366 jours. il est toujours divisible par 4 et non par 100.</p>
+        <P>Faire le teste d'année bissextile.</P>
+        <button onclick="openWindow()">Tester</button>
+        <p id="resultExo1"></p>
+      </div>
+      <div id="exo2">
+        <h1>Exercice 2 :</h1>
+        <!-- form -->
+          <div>
+            <label for="entree">Entrée</label>
+            <select name="entree" id="entree" onchange="changerNbrePersonnes('entree', 'nbE')">
+              <option value="Aucune">Aucune</option>
+              <option value="salade_s">salade simple</option>
+              <option value="salade_f">Salade fruité</option>
+              <option value="salade_v">salade versé + sauce</option>
+            </select>
+            <label for="nbE">Pour</label>
+            <input type="number" id="nbE" onchange="verifierNbre('nbE')"> personnes.
+          </div>
+          <br>
+
+          <div>
+            <label for="plat">Plat</label>
+            <select name="plat" id="plat" onchange="changerNbrePersonnes('plat', 'nbP')">
+              <option value="Aucune">Aucune</option>
+              <option value="plat_j">Plat du jour</option>
+              <option value="plat_s">Plat special</option>
+              <option value="plat_v">Plat versé + sauce</option>
+            </select>
+            <label for="nbP">Pour</label>
+            <input type="number" id="nbP" onchange="verifierNbre('nbP')"> personnes.
+          </div>
+          <br>
+
+          <div>
+            <label for="dessert">Dessert</label>
+            <select name="dessert" id="dessert" onchange="changerNbrePersonnes('dessert', 'nbD')">
+              <option value="Aucune">Aucune</option>
+              <option value="jus_b">Jus bissap</option>
+              <option value="jus_s">Jus sow</option>
+              <option value="jus_v">glace</option>
+            </select>
+            <label for="nbD">Pour</label>
+            <input type="number" id="nbD" onchange="verifierNbre('nbD')"> personnes.
+          </div>
+          <br>
+
+          <div>
+            <textarea rows="5" id="adresse" placeholder="Entrez votre adresse"></textarea>
+          </div>
+
+          <!-- form -->
+
+          <br>
+          <div>
+            <strong>Total Commande :</strong>
+            <input type="text" id="totalCom">
+          </div>
+          <br>
+
+          <button onclick="totalCommande()">Commander</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="exo1.js"></script>
+<script src="exo2.js"></script>
+</html>

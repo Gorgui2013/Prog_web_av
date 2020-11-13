@@ -1,0 +1,45 @@
+<html lang="fr">
+<head>
+  <title>Fiche TP 2</title>
+  <meta charset="Utf-8">
+</head>
+<body>
+  <div align="center">
+
+    <div>
+      <h1>FICHE TP 2</h1>
+      <p>Choisir l'ecxercice à executer</p>
+    </div>
+    <div>
+      <button onclick="openWindowExo1()">Exercice 1</button>
+      <button onclick="openWindowExo2()">Exercice 2</button>
+    </div>
+    <hr>
+
+    <div>
+      <div id="exo1">
+        <h1>Exercice 1 :</h1>
+        <p>Jeu du random. La machine tire un chiffre entre 0 et 10 et à vous de le déviner.</p>
+        <p>Veuillez entrer un nombre !</p>
+        <input type="number" id="nbre1">
+        <button onclick="jouer()" id="bt1">Jouer</button>
+        <p id="result1"></p>
+        <button onclick="rejouer()" id="btR1">Rejouer</button>
+      </div>
+      <div id="exo2">
+        <h1>Exercice 2 :</h1>
+        <p>Jeu du random. La machine tire un chiffre entre 0 et 10 et à vous de le déviner.</p>
+        <p>&#128204; Attention vous avez <strong id="nbEs"></strong> essais &#128204;</p>
+        <p>Veuillez entrer un nombre !</p>
+        <input type="number" id="nbre2">
+        <button onclick="jouer()" id="bt2">Jouer</button>
+        <p id="result2"></p>
+        <button onclick="rejouer()" id="btR2">Rejouer</button>
+      </div>
+    </div>
+
+  </div>
+</body>
+<script src="exo1.js"></script>
+<script src="exo2.js"></script>
+</html>
