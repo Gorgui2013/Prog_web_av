@@ -1,0 +1,84 @@
+<!Doctype html>
+<html lang="fr">
+<head>
+  <title>Fiche TP 3 : Exercice 2</title>
+  <meta charset="Utf-8">
+<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div>
+    <h1>Formulaire</h1>
+    <form method="post" id="formId">
+
+      <div class="group">
+        <label for="etatCivil">Etat Civil</label>
+        <select name="etatCivil" id="etatCivil">
+          <option value="Mr">Mr</option>
+          <option value="Mme">Mme</option>
+        </select>
+      </div>
+
+      <div class="group">
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom">
+      </div>
+
+      <div class="group">
+        <label for="prenom">Prénom</label>
+        <input type="text" id="prenom" name="prenom">
+      </div>
+
+      <div class="group">
+        <label for="complet">Nom complet</label>
+        <input type="text" id="complet" disabled>
+      </div>
+
+      <div class="group">
+        <label for="dateNaissance">Date de naissance</label>
+        <input type="date" id="dateNaissance" name="dateNaissance" min="1970-01-01" max="2020-11-14">
+      </div>
+
+      <div class="group">
+        <label for="niveau">Niveau en JavaScript</label>
+        <input type="range" id="niveau" name="niveau"><strong id="niv"></strong>
+      </div>
+
+      <div class="group">
+        <label for="colorPrefere">Couleur preferee</label>
+        <input type="color" id="colorPrefere" name="colorPrefere">
+      </div>
+
+      <div class="group">
+        <label for="mtPass">Mot de passe</label>
+        <input type="password" id="mtPass" name="mtPass">
+      </div>
+
+      <div class="group">
+        <label for="conMtPass">Mot de passe (confirmation) </label>
+        <input type="password" id="conMtPass" name="conMtPass">
+      </div>
+
+      <div class="group">
+        <label for="afficherMtPass">Afficher mot de passe</label>
+        <input type="checkbox" id="afficherMtPass">
+      </div>
+
+      <div class="group">
+        <label for="description">Description</label>
+        <textarea id="description" rows="3" name="description"></textarea>
+      </div>
+
+      <div class="group">
+        <button type="reset" id="btR">Réinitialiser</button>
+        <button type="submet" id="btE">Envoyer</button>
+      </div>
+    </form>
+
+  </div>
+
+</body>
+<script src="exo2.js"></script>
+<script src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/jquery.validate.min.js"></script>
+</html>

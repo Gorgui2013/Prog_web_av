@@ -18,21 +18,52 @@
     <div>
       <div id="exo1">
         <h1>Exercice 1 :</h1>
-        <hr>
-        <h2>1.</h2>
-        <form id="valid">
-          <label for="input">label</label>
-          <input type="text" id="input">
-          <button type="submit">Valid</button>
-        </form>
-        <p id="info"></p>
+        <button onclick="openQuestion1Exo1()">Question 1</button>
+        <button onclick="openQuestion2Exo1()">Question 2</button>
+        <div id="q1">
+
+          <h2>1. Validation Formulaire</h2>
+          <form id="valid">
+            <label for="input">label</label>
+            <input type="text" id="input">
+            <button type="submit">Valid</button>
+          </form>
+          <p id="info"></p>
+
+        </div>
+        <div id="q2">
+
+          <h2>2. Manipulation Paragraphe</h2>
+          <h1 onclick="showHxContent(1)">Partie 1</h1>
+          <div id="title1" style="display:none">
+            <p>Mon premier paragraphe</p>
+            <p>Mon second paragraphe</p>
+          </div>
+          <h1 onclick="showHxContent(2)">Partie 2</h1>
+          <div id="title2" style="display:none">
+            <p>Mon premier paragraphe</p>
+            <p>Mon second paragraphe</p>
+          </div>
+          <p>
+            <input type="submit" value="Masquer" onclick="hideAllDivs()">
+          </p>
+          <p>
+            Titre N°: <input type="text" id="title">
+            <input type="submit" value="Afficher" onclick="alertTitle()">
+            <input type="submit" value="Delete" onclick="deleteTitle()">
+          </p>
+
+        </div>
+
       </div>
       <div id="exo2">
         <h1>Exercice 2 :</h1>
+
       </div>
     </div>
   </div>
 </body>
 <script src="exo1.js"></script>
+<script src="lib.js"></script>
 <script src="exo2.js"></script>
 </html>
