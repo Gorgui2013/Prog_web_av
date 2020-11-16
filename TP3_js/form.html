@@ -3,31 +3,36 @@
 <head>
   <title>Fiche TP 3 : Exercice 2</title>
   <meta charset="Utf-8">
-<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
   <link rel="stylesheet" href="style.css">
+<!-- on inclut la bibliothèque depuis les serveurs de Google -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 </head>
 <body>
 
   <div>
     <h1>Formulaire</h1>
+    <div id="affForm">
+    </div>
+
+
     <form method="post" id="formId">
 
       <div class="group">
         <label for="etatCivil">Etat Civil</label>
         <select name="etatCivil" id="etatCivil">
-          <option value="Mr">Mr</option>
+          <option value="Mr" selected>Mr</option>
           <option value="Mme">Mme</option>
         </select>
       </div>
 
       <div class="group">
-        <label for="nom">Nom</label>
-        <input type="text" id="nom" name="nom">
+        <label for="nom" class="label">Nom</label>
+        <input type="text" class="input" id="nom" name="nom">
       </div>
 
       <div class="group">
-        <label for="prenom">Prénom</label>
-        <input type="text" id="prenom" name="prenom">
+        <label for="prenom" class="label">Prénom</label>
+        <input type="text" class="input" id="prenom" name="prenom">
       </div>
 
       <div class="group">
@@ -36,8 +41,8 @@
       </div>
 
       <div class="group">
-        <label for="dateNaissance">Date de naissance</label>
-        <input type="date" id="dateNaissance" name="dateNaissance" min="1970-01-01" max="2020-11-14">
+        <label for="dateNaissance" class="label">Date de naissance</label>
+        <input type="date" class="input" id="dateNaissance" name="dateNaissance">
       </div>
 
       <div class="group">
@@ -51,13 +56,13 @@
       </div>
 
       <div class="group">
-        <label for="mtPass">Mot de passe</label>
-        <input type="password" id="mtPass" name="mtPass">
+        <label for="mtPass" class="label">Mot de passe</label>
+        <input type="password" class="input" id="mtPass" name="mtPass">
       </div>
 
       <div class="group">
-        <label for="conMtPass">Mot de passe (confirmation) </label>
-        <input type="password" id="conMtPass" name="conMtPass">
+        <label for="conMtPass" class="label">Mot de passe (confirmation) </label>
+        <input type="password" class="input" id="conMtPass" name="conMtPass">
       </div>
 
       <div class="group">
@@ -66,13 +71,13 @@
       </div>
 
       <div class="group">
-        <label for="description">Description</label>
-        <textarea id="description" rows="3" name="description"></textarea>
+        <label for="description" class="label">Description</label>
+        <textarea class="input" id="description" rows="3" name="description"></textarea>
       </div>
 
       <div class="group">
-        <button type="reset" id="btR">Réinitialiser</button>
-        <button type="submet" id="btE">Envoyer</button>
+        <button type="reset" id="btReset">Réinitialiser</button>
+        <button type="submit" id="btSubmit">Envoyer</button>
       </div>
     </form>
 
@@ -80,5 +85,4 @@
 
 </body>
 <script src="exo2.js"></script>
-<script src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/jquery.validate.min.js"></script>
 </html>
